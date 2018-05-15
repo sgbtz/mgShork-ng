@@ -1,0 +1,61 @@
+<section>
+	<h2 class="mat-h2">IP Route Table</h2>
+	<mat-divider></mat-divider>
+	<mat-card>
+	  <table mat-table #table [dataSource]="ipTable">
+
+	    <!--- Note that these columns can be defined in any order.
+	          The actual rendered columns are set as a property on the row definition" -->
+
+	    <!-- Position Column -->
+	    <ng-container matColumnDef="ipRouteDest">
+	      <th mat-header-cell *matHeaderCellDef> Destination </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[0]}} </td>
+	    </ng-container>
+
+	    <!-- Name Column -->
+	    <ng-container matColumnDef="ipRouteIfIndex">
+	      <th mat-header-cell *matHeaderCellDef> Interface </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[1]}} </td>
+	    </ng-container>
+
+	    <!-- Weight Column -->
+	    <ng-container matColumnDef="ipRouteMetric">
+	      <th mat-header-cell *matHeaderCellDef> Metric </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[2]}} </td>
+	    </ng-container>
+
+	    <!-- Position Column -->
+	    <ng-container matColumnDef="ipRouteNextHop">
+	      <th mat-header-cell *matHeaderCellDef> Next Hop </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[6]}} </td>
+	    </ng-container>
+
+	    <!-- Name Column -->
+	    <ng-container matColumnDef="ipRouteType">
+	      <th mat-header-cell *matHeaderCellDef> Type </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[7]}} </td>
+	    </ng-container>
+
+	    <!-- Symbol Column -->
+	    <ng-container matColumnDef="ipRouteProto">
+	      <th mat-header-cell *matHeaderCellDef> Protocol </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[8]}} </td>
+	    </ng-container>
+	        <!-- Position Column -->
+	    <ng-container matColumnDef="ipRouteAge">
+	      <th mat-header-cell *matHeaderCellDef> Age </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[9]}} </td>
+	    </ng-container>
+
+	    <!-- Name Column -->
+	    <ng-container matColumnDef="ipRouteMask">
+	      <th mat-header-cell *matHeaderCellDef> Mask </th>
+	      <td mat-cell *matCellDef="let ipRoute"> {{ipRoute[10]}} </td>
+	    </ng-container>
+
+	    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+	  </table>
+	</mat-card>
+</section>

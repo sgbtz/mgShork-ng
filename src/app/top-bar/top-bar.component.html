@@ -1,10 +1,15 @@
-<mat-toolbar color="primary">
-	<mat-toolbar-row fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5%">
-		<button mat-button>
-			<mat-icon>home</mat-icon><span class="title"><a href="#"> mgShork</a></span>
-		</button>
-		<button mat-button>
-			<a [routerLink]="['/home']">Home</a>
-		</button>
+<mat-toolbar>
+	<mat-toolbar-row fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0%">
+		<a href="#">
+			<button mat-button>
+				<mat-icon>home</mat-icon><span class="title">  mgShork</span>
+			</button>
+		</a>
+		<div fxFlex="1 2 2"></div>
+		<button mat-button [routerLink]="['/home']">Home</button>
+		<button mat-button [routerLink]="['/system']">System</button>
+		<button mat-button [routerLink]="['/interfaces']">Interfaces</button>
+		<button mat-button [routerLink]="['/ip']">IP Routes</button>
+		<button mat-button [routerLink]="['/trap']">Traps</button>
 	</mat-toolbar-row>
 </mat-toolbar>

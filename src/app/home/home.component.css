@@ -1,0 +1,18 @@
+section {  
+	height: 75%;
+}
+mat-card {
+	width: 300px;
+	height: 100px;
+}
+mat-card:hover {
+	background: #3c4ab3;
+	cursor: pointer;
+	color: white;
+}
+span {
+	font-size: 23px
+}
+mat-card-content {
+	margin-top: 7.5%;
+}

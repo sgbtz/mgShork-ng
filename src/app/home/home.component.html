@@ -1,3 +1,46 @@
-<p>
-  home works!
-</p>
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5%">
+	<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5%">
+		<mat-card [routerLink]="['/system']">
+			<mat-card-header>
+				<div mat-card-avatar><mat-icon>build</mat-icon></div>
+				<mat-card-title><span>System</span></mat-card-title>
+			</mat-card-header>
+			<mat-divider [inset]="true"></mat-divider>
+			<mat-card-content>
+				Explore and configure device settings, such as system name, contact or location.
+			</mat-card-content>
+		</mat-card>
+		<mat-card [routerLink]="['/interfaces']">
+			<mat-card-header>
+				<div mat-card-avatar><mat-icon>input</mat-icon></div>
+				<mat-card-title><span>Interfaces</span></mat-card-title>
+			</mat-card-header>
+			<mat-divider [inset]="true"></mat-divider>
+			<mat-card-content>
+				View device interfaces information, such as packets transmission, port state or port number.
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5%">
+		<mat-card [routerLink]="['/ip']">
+			<mat-card-header>
+				<div mat-card-avatar><mat-icon>storage</mat-icon></div>
+				<mat-card-title><span>IP Routes</span></mat-card-title>
+			</mat-card-header>
+			<mat-divider [inset]="true"></mat-divider>
+			<mat-card-content>
+				Take a look to the system route table.
+			</mat-card-content>
+		</mat-card>
+		<mat-card [routerLink]="['/trap']">
+			<mat-card-header>
+				<div mat-card-avatar><mat-icon>announcement</mat-icon></div>
+				<mat-card-title><span>Traps</span></mat-card-title>
+			</mat-card-header>
+			<mat-divider [inset]="true"></mat-divider>
+			<mat-card-content>
+				Check what's happening in your network throught a trap list with details.
+			</mat-card-content>
+		</mat-card>
+	</div>
+</section>

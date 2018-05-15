@@ -1,0 +1,41 @@
+section {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 2.5%;
+	color: #737373;
+}
+.info1 {
+	margin-top: 2.5%;
+	height: 95px;
+}
+.info2 {
+	margin-top: 7.5%;
+	height: 95px;
+}
+mat-card-title {
+	color: #737373;
+}
+mat-card-content {
+	margin-top: 3%;
+}
+p {
+	text-align: center;
+}
+.description { 
+	width: 70%;
+	height: 100%;
+}
+.upTime { 
+	height: 100%;
+}
+.location {
+	height: 100%;
+	width: 49.6%;
+}
+.location mat-form-field {
+	width: 100%;
+}
+.centerup {
+	display: block;
+	padding-top: 20%;
+}

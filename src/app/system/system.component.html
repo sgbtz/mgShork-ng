@@ -1,3 +1,74 @@
-<p>
-  system works!
-</p>
+<section *ngIf="system">
+	<form (ngSubmit)="setSystem()" #systemForm="ngForm">
+		<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="75%">
+			<h2 class="mat-h2">System Information</h2>
+			<button mat-raised-button color="primary" type="submit">Save</button>
+		</div>
+		<mat-divider></mat-divider>
+		<div class="info1" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5%">
+			<mat-card>
+				<mat-card-header>
+					<mat-card-title>
+						System Name
+					</mat-card-title>
+				</mat-card-header>
+				<mat-divider [inset]="true"></mat-divider>
+				<mat-card-content>
+					<mat-form-field>
+			    	<input matInput required [(ngModel)]="system.name" name="name" #name="ngModel" value="{{system.name}}">
+			  	</mat-form-field>
+			  </mat-card-content>
+		  </mat-card>
+			<mat-card class="description">
+				<mat-card-header>
+					<mat-card-title>
+						System Description
+					</mat-card-title>
+				</mat-card-header>
+				<mat-divider [inset]="true"></mat-divider>
+				<mat-card-content>
+					<p>{{ system.description }}</p>
+			  </mat-card-content>
+		  </mat-card>
+		</div>
+		<div class="info2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5%">
+		  <mat-card class="contact">
+				<mat-card-header>
+					<mat-card-title>
+						System Contact
+					</mat-card-title>
+				</mat-card-header>
+				<mat-divider [inset]="true"></mat-divider>
+				<mat-card-content>
+					<mat-form-field>
+			    	<input matInput required [(ngModel)]="system.contact" name="contact" #contact="ngModel" value="{{system.contact}}">
+			  	</mat-form-field>
+			  </mat-card-content>
+		  </mat-card>
+			<mat-card class="upTime">
+				<mat-card-header>
+					<mat-card-title>
+						System Up Time
+					</mat-card-title>
+				</mat-card-header>
+				<mat-divider [inset]="true"></mat-divider>
+				<mat-card-content class="centerup">
+					<p>{{ system.upTime }}</p>
+			  </mat-card-content>
+		  </mat-card>
+		 	<mat-card class="location">
+				<mat-card-header>
+					<mat-card-title>
+						System Location
+					</mat-card-title>
+				</mat-card-header>
+				<mat-divider [inset]="true"></mat-divider>
+				<mat-card-content class="centerloc">
+					<mat-form-field>
+						<input matInput required [(ngModel)]="system.location" name="location" #location="ngModel" value="{{system.location}}">
+					</mat-form-field>
+			  </mat-card-content>
+		  </mat-card>
+		</div>
+	</form>
+</section>

@@ -1,0 +1,31 @@
+<section>
+			<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="85%">
+			<h2 class="mat-h2">Trap List</h2>
+			<button mat-icon-button (click)="refresh()">
+		    <mat-icon color="primary">autorenew</mat-icon>
+		  </button>
+		</div>
+	<mat-divider></mat-divider>
+	<mat-card>
+		<table mat-table #table [dataSource]="trap_list">
+
+	    <!--- Note that these columns can be defined in any order.
+	          The actual rendered columns are set as a property on the row definition" -->
+
+	    <!-- Position Column -->
+	    <ng-container matColumnDef="trapType">
+	      <th mat-header-cell *matHeaderCellDef> Trap Type </th>
+	      <td mat-cell *matCellDef="let trap">{{trapType[trap.generic_trap]}}</td>
+	    </ng-container>
+
+	    <!-- Position Column -->
+	    <ng-container matColumnDef="timeStamp">
+	      <th mat-header-cell *matHeaderCellDef> Time Stamp </th>
+	      <td mat-cell *matCellDef="let trap"> {{trap.time_stamp}} </td>
+	    </ng-container>
+
+	  	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		 </table>
+	</mat-card>
+</section>
